@@ -20,7 +20,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-[#F5FFF6]">
+  <body class="flex flex-col bg-[#F5FFF6]">
     <!-- header section -->
     <header
       class="bg-white flex justify-between items-center w-11/12 m-auto py-4"
@@ -76,9 +76,9 @@
 
       <section
         id="service-container"
-        class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8"
+        class="w-11/12 mx-auto py-10 grid grid-cols-12 gap-8 "
       >
-      <section id="service-box" class="col-span-9">
+      <section id="service-box" class="col-span-9 flex-col">
             <div class="emergency-service grid grid-cols-3 gap-5">
               <!-- service card 1 All  -->
               <div class="card bg-white shadow-sm p-6">
@@ -116,7 +116,7 @@
                     <img class=" service-img w11 h-11 bg-[#FFE3E2] rounded-xl p-2" src="./assets/fire-service.png" alt="">
                     <i class="heart-icon cursor-pointer fa-regular fa-heart"></i>
                   </div>
-                <h2 class="font-semibold service-name text-lg">Fire Service Number Number</h2>
+                <h2 class="font-semibold service-name text-lg">Fire Service Number</h2>
                 <p>Fire Service</p>
                 <p class="service-number font-bold">999</p>
                 <button class="w-3/12 btn rounded-3xl mb-2 text-xs">Fire</button>
@@ -195,7 +195,6 @@
         </aside>
       </section>
     </main>
-
-    <script src="./script/index.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>

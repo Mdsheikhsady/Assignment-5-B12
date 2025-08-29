@@ -1,16 +1,8 @@
+// heart count increase on click
 let totalHeartCount = 0;
-let totalCoinCount = 100;
-let totalCopyCount = 0;
-
 const newHeartCount = document.getElementById("heart-count");
-const newCoinCount = document.getElementById("coin-count");
-const newCopyCount = document.getElementById("copy-count");
-const historyContainer = document.getElementById("history-container");
-const clearBtn = document.getElementById("clear");
-// const callList = document.getElementById("all-call");
-// const clearCallHistory = document.getElementById("clear");
-// heart cont increase by clicking
 const heartIcon = document.querySelectorAll(".heart-icon");
+
 for(const icon of heartIcon){
     icon.addEventListener("click", () => {
         totalHeartCount++;
@@ -19,7 +11,10 @@ for(const icon of heartIcon){
 }
 
 // copy button count and clipboard
+let totalCopyCount = 0;
+const newCopyCount = document.getElementById("copy-count");
 const copyBtns = document.querySelectorAll(".copy-btn");
+
 for(const btn of copyBtns){
     btn.addEventListener("click", (e) =>{
         const card = e.target.closest(".card");
@@ -34,8 +29,11 @@ for(const btn of copyBtns){
     });
 }
 
-// call history js
-
+// call history js and new child append 
+let totalCoinCount = 100;
+const newCoinCount = document.getElementById("coin-count");
+const historyContainer = document.getElementById("history-container");
+const clearBtn = document.getElementById("clear");
 const callBtns = document.querySelectorAll(".call-btn");
 for(const btn of callBtns){
     btn.addEventListener("click", (e) => {
@@ -50,6 +48,8 @@ for(const btn of callBtns){
         totalCoinCount -= 20;
         newCoinCount.textContent = totalCoinCount;
         alert(`Calling ${serviceName} ${serviceNumber}`);
+
+        
 
         const callTime = new Date().toLocaleTimeString();
         const historyEntry = document.createElement("div");
